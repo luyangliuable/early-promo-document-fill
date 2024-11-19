@@ -12,11 +12,17 @@ https://llcode.tech
 ## a) What product/s do you work on and what is your role in that product's development?
 I am currently doing work across two different squads.
 
-One of the product I am involved with is the publishing and orchestration framework. This framework is crucial for managing the execution, transformation, and loading of model outputs. My role involves developing and maintaining this framework to ensure it meets the functional requirements as outlined in our user stories. Specifically, I focus on automating model job executions, transforming model outputs, and ensuring data quality through various validation checks. My key contributions are:
+One of the product I am involved with is the publishing and orchestration framework. This framework is crucial for managing the execution, transformation, and loading of model outputs. My role involves developing and maintaining this framework to ensure it meets the functional requirements as outlined in our user stories. 
+
+Our pipeline facilitates sending AI model scores for customer behavioural insights and fraud detection to the CEE database. Customer behavioural insights involve analyzing data on customer interactions and transactions to understand their preferences, habits, and needs.
+
+Fraud detection in retail banking services involves identifying and preventing fraudulent activities such as unauthorized transactions, identity theft, and other financial crimes.
+
+One the team I focus on automating model job executions, transforming model outputs, and ensuring data quality through various validation checks. My key contributions are:
 
 * Performed airflow strategic alert uplift image testing, by ensuring All existing flows are validated with new docker image.
 * Built and pushed a custom Airflow Docker image with the updated Amazon provider package to Artifactory, then test it in the non-production environment to ensure all existing DAGs remain functional and resolve the `GlueSensorOperator` error.
-* Created and configure the FRAUMD Kafka publisher and streamer pipeline in the adc-fraumd-stg namespace, then perform a full end-to-end test, including Helm charts creation, secrets management, and a complete test run from Snowflake to Oracle CEE.
+* Created and configure the fraud detection and customer behavioural insights - retail banking services Kafka publisher and streamer pipeline in the `adc-fraumd-stg` namespace, then perform a full end-to-end test, including Helm charts creation, secrets management, and a complete test run from Snowflake to Oracle CEE.
  
 As part of maintaining and building the publishing and orchestration framework, we also utilised a tool called apache airflow which is a workflow management application that can perform dynamic workflow creation and scheduling and monitoring tasks. An Airflow DAG (Directed Acyclic Graph) is a collection of tasks organised in a way that reflects their dependencies and execution order within Apache Airflow, a platform used to programmatically author, schedule, and monitor workflows. Each DAG defines a workflow, which is a series of tasks that need to be executed in a specific order.
 
@@ -108,7 +114,9 @@ Consider how you contribute to the Technology Strategy. Provide links to your co
 * https://commbank.atlassian.net/wiki/spaces/CCS/pages/705702737/Onboarding+-+MLOPs+Publishing+and+Orchestration+Squad
 
 ## How have you contributed to improving engineering at CBA?
-I have contributed to improving engineering at CBA by addressing an issue in the Homebrew setup guide on the engineering handbook. When users followed the guide to install Homebrew and encountered an error with the brew install `jq` command, I created a script that bypasses the need to have jq installed. This aides in the speedup of the onboarding process. This solution ensures a smoother setup process for users, even when Artifactory is not set up, thereby enhancing the overall efficiency and reliability of our engineering practices.
+I have contributed to improving engineering at CBA by addressing an issue in the homebrew setup guide on the engineering handbook. Homebrew is a popular package manager for macOS (and Linux) that simplifies the installation of software. It allows users to easily install, update, and manage software packages and their dependencies from the command line. 
+
+When users followed the guide to install Homebrew and encountered an error with the brew install `jq` command, I created a script that bypasses the need to have jq installed. This aides in the speedup of the onboarding process. This solution ensures a smoother setup process for users, even when Artifactory is not set up, thereby enhancing the overall efficiency and reliability of our engineering practices.
 
 * PR Added brew_login script that doesn't require jq. #94
   * https://github.com/CBA-General/docs.engineering-handbook/pull/94
