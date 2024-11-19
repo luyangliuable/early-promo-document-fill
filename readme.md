@@ -56,13 +56,24 @@ The issue i was assigned to on the official apache airflow open source repo are:
 
 Consider how you contribute to the Technology Strategy. Provide links to your contributions (ie solving blocker board items, mentoring others, optimising or automating toil, introducing modern technical practices to your squad/s eg shift left testing, contributing to the engineering handbook etc).
 
-* Blogpost i used for mentoring:
-https://llcode.tech/digital-chronicles/blog/66e0359b18eb5f86ea13b52d
-
-* https://commbank.atlassian.net/wiki/spaces/CCS/pages/1028566055/How+to+Run+Airflow+on+Dag+Repo+Locally
-* https://commbank.atlassian.net/wiki/spaces/CCS/pages/1061128756/How+to+Publish+a+Docker+Image+to+Artifactory
-* https://commbank.atlassian.net/wiki/spaces/CCS/pages/1029104419/How+to+Implement+a+Retry+Policy+on+the+whole+DAG+when+a+Task+Fails
-* https://commbank.atlassian.net/wiki/spaces/CCS/pages/1031439681/Observe+Dashboard+for+Airflow+Handbook
+* Blogpost i used for mentoring other commsee 2 grads on how to use react and css:
+  * https://llcode.tech/digital-chronicles/blog/66e0359b18eb5f86ea13b52d
+* How to Run Airflow on Dag Repo Locally
+  * https://commbank.atlassian.net/wiki/spaces/CCS/pages/1028566055/How+to+Run+Airflow+on+Dag+Repo+Locally
+  * This Confluence page provides a step-by-step guide on how to run Apache Airflow DAGs locally on a development laptop using port 8080. It allows engineers to run and test Airflow DAGs locally, which speeds up the development and debugging process.
+* How to Publish a Docker Image to Artifactory?
+  * This Confluence page provides a step-by-step guide on creating and publishing a Docker image to Artifactory. This streamlines the process of creating and publishing Docker images, enhancing efficiency and consistency in deploying containerized applications within CBA.
+  * https://commbank.atlassian.net/wiki/spaces/CCS/pages/1061128756/How+to+Publish+a+Docker+Image+to+Artifactory
+* How to Implement a Retry Policy on the whole DAG when a Task Fails
+  * https://commbank.atlassian.net/wiki/spaces/CCS/pages/1029104419/How+to+Implement+a+Retry+Policy+on+the+whole+DAG+when+a+Task+Fails
+* Observe Dashboard for Airflow Handbook
+  * To teach POs and other engineers on how to use the new observe dashboard after migration from using splunk for cost savings and as part of the devSecOps movement.
+  * https://commbank.atlassian.net/wiki/spaces/CCS/pages/1031439681/Observe+Dashboard+for+Airflow+Handbook
+* How to Setup AWS Codebuild with Github
+  * https://commbank.atlassian.net/wiki/spaces/CCS/pages/1086188070/How+to+Setup+AWS+Codebuild+with+Github
+  * This guide provides instructions on setting up a CodeBuild pipeline using the `adc.integration-framework` repository.
+  
+#### Confluence Pages I have Contributed to for Housekeeping
 * https://commbank.atlassian.net/wiki/spaces/CCS/pages/1013088888/Runsheet+Github+Migration+PROD
 * https://commbank.atlassian.net/wiki/spaces/CCS/pages/1004508095/Analysis+-+Migration+of+Airflow+to+AWS+Managed+Airflow+Service
 * https://commbank.atlassian.net/wiki/spaces/CCS/pages/916112283/FRAUMD+Kafka+topic+-+Test+Results
@@ -130,6 +141,8 @@ Provide links (ie PR's) you are proud of, showing quality code review, github st
 * https://github.source.internal.cba/ApplicationInfrastructure/aws.eks.clusters
 * https://github.source.internal.cba/AnalyticsInformation/adc.integration-framework
 * https://github.com/CBA-CommBank/MyProperty
+
+#### My PR Requests
 
 * Add docker-artifactory token secret retrieval.
 https://github.source.internal.cba/DataExchangeProducts/apihosting-eks-apps/pull/581
