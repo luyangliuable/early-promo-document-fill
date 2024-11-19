@@ -43,6 +43,15 @@ Then, I had to run a full test run of publishing to the Snowflake S07 test table
 
 The most valued contribution to my product is the GitHub Enterprise Cloud (GHEC) migration. This task involves extensive connectivity configuration, such as configuring the `calico network` to allow egress to the app-proxy, which is necessary for Airflow to sync the DAGs from the repository. We also needed to properly manage AWS secrets, including the GHEC service account credentials, and set up GitHub app authentication for GitHub workflows using Vault secrets. Additionally, updating GitHub Actions was required. I believe my extensive understanding of Git and GitHub enabled me to accomplish this task effectively. For instance, we needed to sync the branches of the old GitHub repository to the newly created GitHub cloud repository. I achieved this by setting two remotes locally, rebasing, and then pushing the branches from the old repository to the new repository.
 
+I also made significant contributions to the Apache Airflow tech stack, an open-source tool widely used at CBA. My ability to set up Airflow and contribute to its source code demonstrates my exemplary skills as a developer. This work not only indirectly benefited everyone at CBA who relies on this tool but also every engineer and organisation that are using it as well elsewhere!
+
+PR i created and merged for the official apache airflow open source tool:
+https://github.com/apache/airflow/pull/42896
+
+The issue i was assigned to on the official apache airflow open source repo are:
+https://github.com/apache/airflow/issues/42714#issuecomment-2426680190
+https://github.com/apache/airflow/issues/43703
+
 ### Supporting artefacts and information
 
 Consider how you contribute to the Technology Strategy. Provide links to your contributions (ie solving blocker board items, mentoring others, optimising or automating toil, introducing modern technical practices to your squad/s eg shift left testing, contributing to the engineering handbook etc).
@@ -62,11 +71,17 @@ https://commbank.atlassian.net/wiki/spaces/CCS/pages/900014497/Splunk+queries+to
 https://commbank.atlassian.net/wiki/spaces/CCS/pages/705702737/Onboarding+-+MLOPs+Publishing+and+Orchestration+Squad
 
 ## How have you contributed to improving engineering at CBA?
-I have contributed to improving engineering at CBA by addressing an issue in the Homebrew setup guide on the engineering handbook. When users followed the guide to install Homebrew and encountered an error with the brew install jq command, I created a script that bypasses the need to have jq installed. This solution ensures a smoother setup process for users, even when Artifactory is not set up, thereby enhancing the overall efficiency and reliability of our engineering practices.
+I have contributed to improving engineering at CBA by addressing an issue in the Homebrew setup guide on the engineering handbook. When users followed the guide to install Homebrew and encountered an error with the brew install `jq` command, I created a script that bypasses the need to have jq installed. This aides in the speedup of the onboarding process. This solution ensures a smoother setup process for users, even when Artifactory is not set up, thereby enhancing the overall efficiency and reliability of our engineering practices.
+PR evidence: https://github.com/CBA-General/docs.engineering-handbook/pull/94
 
 I also improved automation and branch naming by integrating the GENAI GitHub service account in the Toolkit trigger by updating the lambda function code to use a different authentication method and updating the branch naming methodology. This allows for more efficient triggering of workflows and tasks, reducing manual intervention and increasing overall productivity.
+PR evidence: https://github.com/CBA-General/dep-GenEx.AI/pull/19
 
 I integrated a code formatting script using `Prettier` into the `package.json` and created an `.editorconfig` file for the Xena chatbot frontend. So when dev push code onto the repo it will be formatted in a consistent manner, This initiative significantly enhanced engineering by improving code quality and readability. The integration of Prettier enforces consistent code formatting, thereby reducing syntax errors and manual formatting efforts. The .editorconfig file standardizes development environments across the team, ensuring uniformity in coding practices. These technical enhancements make the codebase easier to read, review, and maintain, ultimately fostering a more efficient and cohesive development workflow.
+PR evidence: https://github.com/CBA-General/dep-GenEx.AI-ui/pull/25
+
+I also made significant contributions to the Apache Airflow tech stack, an open-source tool widely used at CBA. My ability to set up Airflow and contribute to its source code demonstrates my exemplary skills as a developer. This work not only indirectly benefited everyone at CBA who relies on this tool but also every engineer and organisation that are using it as well elsewhere!
+PR evidence: https://github.com/apache/airflow/pull/42896
 
 ## Supporting artefacts and information
 PR contribution to engineering handbook:
@@ -76,13 +91,21 @@ Provide links as evidence to the body of work, portfolio or other suitable artef
 
 ## a) Describe examples where you mentored other engineers
 
-I have connections with the grads from the commsee team, and since I possess a great deal of frontend software engineering knowledge I organised a bootcamp for the entire commsee team's grads on how to use react and css.
-
 I created a presentation as well as a created new handbook on confluence on how to use the observe dashboard for airflow. These engineers include senior engineers and product owners.
+Evidence: https://commbank.atlassian.net/wiki/spaces/CCS/pages/1031439681/Observe+Dashboard+for+Airflow+Handbook
 
-I presented in front other engineers on the team how to utilise apache airflow.
+I presented in front other engineers on the team how to utilise apache airflow which is a toool we are using for workflow management and it can perform dynamic workflow creation and scheduling and monitoring tasks.
 
 I create a retry policy template for apache airflow and i created a workshop to teach other engineers on how I implemented it.
+Evidence: https://commbank.atlassian.net/wiki/spaces/CCS/pages/1029104419/How+to+Implement+a+Retry+Policy+on+the+whole+DAG+when+a+Task+Fails
+
+I also demonstrate a great deal of initiative when it comes to sharing my knowledge with other engineers. I have connections with almost every grad from the CommSee team, and since I possess a great deal of frontend software engineering knowledge, I took the initiative to organise a bootcamp for the entire CommSee team's grads on how to use React and CSS.
+ 
+Blog post evidence: https://llcode.tech/digital-chronicles/blog/66e0359b18eb5f86ea13b52d
+
+I also showcase strong coding capabilities within my team, which leads my teammates to frequently seek my assistance, particularly with matters related to Apache Airflow and EKS clusters/Kubernetes. Additionally, I respond swiftly to messages and requests, such as when engineers ask for write permissions to repositories.
+ 
+Photo evidence:
 
 ## b) What improvements did you observe in the people you mentored?
 
@@ -91,15 +114,15 @@ I create a retry policy template for apache airflow and i created a workshop to 
 
 ## ) What is the most effective method of mentoring you have experienced?
 
-TM coaches me by providing me with regularly catchups (roughly fortnightly) and on the rotation i was assigned a technical buddy who i can resort to for understanding key concepts and know what permissions i need to request. My TM is very positive and provides a lot of encouragements which makes me really motivated to do work and feel positive about the things i do.
+My Technical Manager (TM) coaches me through regular catch-ups, approximately every fortnight. During my rotation, I was also assigned a technical buddy who I can turn to for understanding key concepts and knowing which permissions to request. My TM is very positive and provides a lot of encouragement, which keeps me motivated and makes me feel positive about my work.
 
-I have consistently demonstrated autonomy throughout my rotation, so i find solving problems on my own also really effective in understanding and learning about the work on my team. I feel like i am equiped with all the tools and resources I need to be able 
+I have consistently demonstrated autonomy throughout my rotation, finding that solving problems on my own is highly effective for understanding and learning about my team's work. I feel equipped with all the tools and resources I need to succeed.
 
-Supporting artefacts and information
+### Supporting artefacts and information
 
 Provide links (ie PR's) you are proud of, showing quality code review, github stats on commits, recognitions for our values as they relate to engineering etc.
 
-## Repository i have contributed to:
+#### Repository i have contributed to:
 https://github.com/CBA-General/dep-genex.ai-ui
 https://github.com/CBA-General/dep-genex.ai
 https://github.com/CBA-General/adc.airflow.dag
@@ -115,7 +138,7 @@ https://github.source.internal.cba/DataExchangeProducts/apihosting-eks-apps/pull
 Feature/sprvrs 1986 incl status categories for airflow
 https://github.source.internal.cba/DataExchangeProducts/apihosting-eks-apps
 
-## Added cee-publisher-mar to prod environment:
+Added cee-publisher-mar to prod environment:
 https://github.source.internal.cba/DataExchangeProducts/apihosting-eks-apps/pull/560
 
 This PR updates the Kafka endpoints and implements a new architecture for the Kafka pipeline to enhance the scalability and reliability of the model score output stream to CEE. The current Kafka pipeline configuration faces several challenges:
@@ -161,6 +184,14 @@ https://github.source.internal.cba/DataExchangeProducts/apihosting-eks-apps/pull
 
 PR for custom docker image:
 https://github.source.internal.cba/AnalyticsInformation/adc.integration-framework/pull/67
+I also contributed directly to the apache airflow tech stack which is open source which indirectly impacted everyone's work at cba because they are using this tool. My knowledge of able to set up airflow and contribute to its source code exemplifies my explelary skills as a developer.
+
+PR i created and merged for the official apache airflow open source tool:
+https://github.com/apache/airflow/pull/42896
+
+The issue i was assigned to on the official apache airflow open source repo are:
+https://github.com/apache/airflow/issues/42714#issuecomment-2426680190
+https://github.com/apache/airflow/issues/43703
 
 PR contribution to engineering handbook:
 https://github.com/CBA-General/docs.engineering-handbook/pull/94
@@ -174,6 +205,9 @@ https://github.com/CBA-General/adc.airflow.dag/pull/112
 PR forparquet file parsing for human readable format on xena UI:
 https://github.com/CBA-General/dep-GenEx.AI-ui/pull/25
 
+Updated toolkit trigger authentication method and lamda function for parsing parquet file (1 PR for two separate tickets)
+https://github.com/CBA-General/dep-GenEx.AI/pull/19
+
 PR Update prod configs to use ghec. #548
 https://github.source.internal.cba/DataExchangeProducts/apihosting-eks-apps/pull/548
 
@@ -186,13 +220,13 @@ https://github.source.internal.cba/PublicCloudLandingZoneExceptions/cba-a-ani-cd
 Feature/sprvrs 2009 build custom airflow docker image #67
 https://github.source.internal.cba/AnalyticsInformation/adc.integration-framework/pull/67
 
-### PR I have reviewed
+#### PR I have reviewed
 https://github.source.internal.cba/AnalyticsInformation/adc.airflow.config/pull/410
 https://github.com/CBA-General/adc.airflow.dag/pull/24
 https://github.com/CBA-General/adc.airflow.dag/pull/37
 https://github.source.internal.cba/AnalyticsInformation/adc.airflow.dag/pull/1404
 
-### PR from last last rotation
+#### Other PRs from my last rotation
 https://github.source.internal.cba/DigitalChannels/myproperty/pull/665
 https://github.source.internal.cba/DigitalChannels/myproperty/pull/662
 https://github.source.internal.cba/DigitalChannels/myproperty/pull/660
