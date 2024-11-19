@@ -41,34 +41,33 @@ Then, I had to run a full test run of publishing to the Snowflake S07 test table
 
 ## c) What is your most valued contribution to the product?
 
-The most valued contribution to my product is the GitHub Enterprise Cloud (GHEC) migration. This task involves extensive connectivity configuration, such as configuring the `calico network` to allow egress to the app-proxy, which is necessary for Airflow to sync the DAGs from the repository. We also needed to properly manage AWS secrets, including the GHEC service account credentials, and set up GitHub app authentication for GitHub workflows using Vault secrets. Additionally, updating GitHub Actions was required. I believe my extensive understanding of Git and GitHub enabled me to accomplish this task effectively. For instance, we needed to sync the branches of the old GitHub repository to the newly created GitHub cloud repository. I achieved this by setting two remotes locally, rebasing, and then pushing the branches from the old repository to the new repository.
+The most valued contribution to my product is the GitHub Enterprise Cloud (GHEC) migration. This task involves extensive connectivity configuration, such as configuring the `calico network` to allow egress to the app-proxy, which is necessary for Airflow to sync the DAGs from the repository. We also needed to properly manage AWS secrets, including the GHEC service account credentials, and set up GitHub app authentication for GitHub workflows using Vault secrets. Additionally, updating GitHub Actions was required. I believe my extensive understanding of Git and GitHub enabled me to accomplish this task effectively. For instance, we needed to sync the branches of the old GitHub repository to the newly created GitHub cloud repository. I achieved this by setting two remotes locally, rebasing, fixing a myriad of merge conflicts, and then pushing the branches from the old repository to the new repository.
 
 I also made significant contributions to the Apache Airflow tech stack, an open-source tool widely used at CBA. My ability to set up Airflow and contribute to its source code demonstrates my exemplary skills as a developer. This work not only indirectly benefited everyone at CBA who relies on this tool but also every engineer and organisation that are using it as well elsewhere!
 
 PR i created and merged for the official apache airflow open source tool:
-https://github.com/apache/airflow/pull/42896
+* https://github.com/apache/airflow/pull/42896
 
 The issue i was assigned to on the official apache airflow open source repo are:
-https://github.com/apache/airflow/issues/42714#issuecomment-2426680190
-https://github.com/apache/airflow/issues/43703
+* https://github.com/apache/airflow/issues/42714#issuecomment-2426680190
+* https://github.com/apache/airflow/issues/43703
 
 ### Supporting artefacts and information
 
 Consider how you contribute to the Technology Strategy. Provide links to your contributions (ie solving blocker board items, mentoring others, optimising or automating toil, introducing modern technical practices to your squad/s eg shift left testing, contributing to the engineering handbook etc).
 
-Blogpost i used for mentoring:
+* Blogpost i used for mentoring:
 https://llcode.tech/digital-chronicles/blog/66e0359b18eb5f86ea13b52d
 
-https://commbank.atlassian.net/wiki/spaces/CCS/pages/1028566055/How+to+Run+Airflow+on+Dag+Repo+Locally
-https://commbank.atlassian.net/wiki/spaces/CCS/pages/1061128756/How+to+Publish+a+Docker+Image+to+Artifactory
-https://commbank.atlassian.net/wiki/spaces/CCS/pages/1029104419/How+to+Implement+a+Retry+Policy+on+the+whole+DAG+when+a+Task+Fails
-https://commbank.atlassian.net/wiki/spaces/CCS/pages/1031439681/Observe+Dashboard+for+Airflow+Handbook
-https://commbank.atlassian.net/wiki/spaces/CCS/pages/1013088888/Runsheet+Github+Migration+PROD
-https://commbank.atlassian.net/wiki/spaces/CCS/pages/1004508095/Analysis+-+Migration+of+Airflow+to+AWS+Managed+Airflow+Service
-
-https://commbank.atlassian.net/wiki/spaces/CCS/pages/916112283/FRAUMD+Kafka+topic+-+Test+Results
-https://commbank.atlassian.net/wiki/spaces/CCS/pages/900014497/Splunk+queries+to+Observe
-https://commbank.atlassian.net/wiki/spaces/CCS/pages/705702737/Onboarding+-+MLOPs+Publishing+and+Orchestration+Squad
+* https://commbank.atlassian.net/wiki/spaces/CCS/pages/1028566055/How+to+Run+Airflow+on+Dag+Repo+Locally
+* https://commbank.atlassian.net/wiki/spaces/CCS/pages/1061128756/How+to+Publish+a+Docker+Image+to+Artifactory
+* https://commbank.atlassian.net/wiki/spaces/CCS/pages/1029104419/How+to+Implement+a+Retry+Policy+on+the+whole+DAG+when+a+Task+Fails
+* https://commbank.atlassian.net/wiki/spaces/CCS/pages/1031439681/Observe+Dashboard+for+Airflow+Handbook
+* https://commbank.atlassian.net/wiki/spaces/CCS/pages/1013088888/Runsheet+Github+Migration+PROD
+* https://commbank.atlassian.net/wiki/spaces/CCS/pages/1004508095/Analysis+-+Migration+of+Airflow+to+AWS+Managed+Airflow+Service
+* https://commbank.atlassian.net/wiki/spaces/CCS/pages/916112283/FRAUMD+Kafka+topic+-+Test+Results
+* https://commbank.atlassian.net/wiki/spaces/CCS/pages/900014497/Splunk+queries+to+Observe
+* https://commbank.atlassian.net/wiki/spaces/CCS/pages/705702737/Onboarding+-+MLOPs+Publishing+and+Orchestration+Squad
 
 ## How have you contributed to improving engineering at CBA?
 I have contributed to improving engineering at CBA by addressing an issue in the Homebrew setup guide on the engineering handbook. When users followed the guide to install Homebrew and encountered an error with the brew install `jq` command, I created a script that bypasses the need to have jq installed. This aides in the speedup of the onboarding process. This solution ensures a smoother setup process for users, even when Artifactory is not set up, thereby enhancing the overall efficiency and reliability of our engineering practices.
@@ -123,130 +122,128 @@ I have consistently demonstrated autonomy throughout my rotation, finding that s
 Provide links (ie PR's) you are proud of, showing quality code review, github stats on commits, recognitions for our values as they relate to engineering etc.
 
 #### Repository i have contributed to:
-https://github.com/CBA-General/dep-genex.ai-ui
-https://github.com/CBA-General/dep-genex.ai
-https://github.com/CBA-General/adc.airflow.dag
-https://github.com/CBA-General/adc.airflow.config
-https://github.source.internal.cba/DataExchangeProducts/apihosting-eks-apps
-https://github.source.internal.cba/ApplicationInfrastructure/aws.eks.clusters
-https://github.source.internal.cba/AnalyticsInformation/adc.integration-framework
-https://github.com/CBA-CommBank/MyProperty
+* https://github.com/CBA-General/dep-genex.ai-ui
+* https://github.com/CBA-General/dep-genex.ai
+* https://github.com/CBA-General/adc.airflow.dag
+* https://github.com/CBA-General/adc.airflow.config
+* https://github.source.internal.cba/DataExchangeProducts/apihosting-eks-apps
+* https://github.source.internal.cba/ApplicationInfrastructure/aws.eks.clusters
+* https://github.source.internal.cba/AnalyticsInformation/adc.integration-framework
+* https://github.com/CBA-CommBank/MyProperty
 
-Add docker-artifactory token secret retrieval.
+* Add docker-artifactory token secret retrieval.
 https://github.source.internal.cba/DataExchangeProducts/apihosting-eks-apps/pull/581
 
-Feature/sprvrs 1986 incl status categories for airflow
+* Feature/sprvrs 1986 incl status categories for airflow
 https://github.source.internal.cba/DataExchangeProducts/apihosting-eks-apps
 
-Added cee-publisher-mar to prod environment:
-https://github.source.internal.cba/DataExchangeProducts/apihosting-eks-apps/pull/560
+* Added cee-publisher-mar to prod environment:
+  * https://github.source.internal.cba/DataExchangeProducts/apihosting-eks-apps/pull/560
+  * This PR updates the Kafka endpoints and implements a new architecture for the Kafka pipeline to enhance the scalability and reliability of the model score output stream to CEE. The current Kafka pipeline configuration faces several challenges:
+    * Capacity Bottlenecks: The common Kafka topic may hit capacity limits (currently 20GB) as more models are added, leading to potential message loss.
+    * Single Point of Failure: Issues in the common streamer instance can impact the output to CEE for all models.
+    * Scalability Limitations: The current setup cannot scale effectively due to storage and processing limitations, leading to performance slowdowns as more models are added. To address these issues, we propose a new architecture that provisions use case-specific publishers, Kafka topics, and streamer instances. This approach will enhance scalability, reduce the risk of message loss, and isolate the impact of any issues to specific use cases.
 
-This PR updates the Kafka endpoints and implements a new architecture for the Kafka pipeline to enhance the scalability and reliability of the model score output stream to CEE. The current Kafka pipeline configuration faces several challenges:
-Capacity Bottlenecks: The common Kafka topic may hit capacity limits (currently 20GB) as more models are added, leading to potential message loss.
-Single Point of Failure: Issues in the common streamer instance can impact the output to CEE for all models.
-Scalability Limitations: The current setup cannot scale effectively due to storage and processing limitations, leading to performance slowdowns as more models are added. To address these issues, we propose a new architecture that provisions use case-specific publishers, Kafka topics, and streamer instances. This approach will enhance scalability, reduce the risk of message loss, and isolate the impact of any issues to specific use cases.
-
-Added cee-publisher-mar to prod environment. #515
+* Added cee-publisher-mar to prod environment. #515
 https://github.source.internal.cba/DataExchangeProducts/apihosting-eks-apps/pull/515
 
-Feature/sprvrs 1572 fraumd kafka topic staging implementation #517
+* Feature/sprvrs 1572 fraumd kafka topic staging implementation #517
 https://github.source.internal.cba/DataExchangeProducts/apihosting-eks-apps/pull/517
 
-Fix customer oracle url address causing connection issue. #523
+* Fix customer oracle url address causing connection issue. #523
 https://github.source.internal.cba/DataExchangeProducts/apihosting-eks-apps/pull/523
 
-Updated airflow values to include ghec and airflow-git-sync-secrets. #526
+* Updated airflow values to include ghec and airflow-git-sync-secrets. #526
 https://github.source.internal.cba/DataExchangeProducts/apihosting-eks-apps/pull/526
 
-Added secrets for adc-fraumd-stg stg-kafka-publisher-cvs #527
+* Added secrets for adc-fraumd-stg stg-kafka-publisher-cvs #527
 https://github.source.internal.cba/DataExchangeProducts/apihosting-eks-apps/pull/527
 
-Updated airflow values to include ghec and airflow-git-sync-secrets
+* Updated airflow values to include ghec and airflow-git-sync-secrets
 https://github.source.internal.cba/DataExchangeProducts/apihosting-eks-apps/pull/528
 
-Update image version.
+* Update image version.
 https://github.source.internal.cba/DataExchangeProducts/apihosting-eks-apps/pull/529
 
-Fix bootstrap servers they were publishing to nft
+* Fix bootstrap servers they were publishing to nft
 https://github.source.internal.cba/DataExchangeProducts/apihosting-eks-apps/pull/530
 
-Add rule that allows Ingress from specific IP ranges for Airflow #4846
+* Add rule that allows Ingress from specific IP ranges for Airflow #4846
 https://github.source.internal.cba/ApplicationInfrastructure/aws.eks.clusters/pull/4846
 
-SPRVRS-1482 Add rule that allows Ingress from specific IP ranges for … #4858
+* SPRVRS-1482 Add rule that allows Ingress from specific IP ranges for … #4858
 https://github.source.internal.cba/ApplicationInfrastructure/aws.eks.clusters/pull/4858
 
-Add docker-artifactory token secret retrieval.
+* Add docker-artifactory token secret retrieval.
 https://github.source.internal.cba/DataExchangeProducts/apihosting-eks-apps/pull/581
 
-Updated the Kafka endpoints based on the links provided at the end of the Confluence page
+* Updated the Kafka endpoints based on the links provided at the end of the Confluence page
 https://github.source.internal.cba/DataExchangeProducts/apihosting-eks-apps/pull/560
 
-PR for custom docker image:
+* PR for custom docker image:
 https://github.source.internal.cba/AnalyticsInformation/adc.integration-framework/pull/67
-I also contributed directly to the apache airflow tech stack which is open source which indirectly impacted everyone's work at cba because they are using this tool. My knowledge of able to set up airflow and contribute to its source code exemplifies my explelary skills as a developer.
 
-PR i created and merged for the official apache airflow open source tool:
+* PR i created and merged for the official apache airflow open source tool:
 https://github.com/apache/airflow/pull/42896
 
-The issue i was assigned to on the official apache airflow open source repo are:
+* The issue i was assigned to on the official apache airflow open source repo are:
 https://github.com/apache/airflow/issues/42714#issuecomment-2426680190
 https://github.com/apache/airflow/issues/43703
 
-PR contribution to engineering handbook:
+* PR contribution to engineering handbook:
 https://github.com/CBA-General/docs.engineering-handbook/pull/94
 
-PR contribution to Apache Airflow repo (the tool we are using at cba):
+* PR contribution to Apache Airflow repo (the tool we are using at cba):
 https://github.com/apache/airflow/pull/42896
 
-PR for Added file for performing cee reconciliation alert testing.
+* PR for Added file for performing cee reconciliation alert testing.
 https://github.com/CBA-General/adc.airflow.dag/pull/112
 
-PR forparquet file parsing for human readable format on xena UI:
+* PR for parquet file parsing for human readable format on xena UI:
 https://github.com/CBA-General/dep-GenEx.AI-ui/pull/25
 
-Updated toolkit trigger authentication method and lamda function for parsing parquet file (1 PR for two separate tickets)
+* Updated toolkit trigger authentication method and lamda function for parsing parquet file (1 PR for two separate tickets)
 https://github.com/CBA-General/dep-GenEx.AI/pull/19
 
-PR Update prod configs to use ghec. #548
+* PR Update prod configs to use ghec. #548
 https://github.source.internal.cba/DataExchangeProducts/apihosting-eks-apps/pull/548
 
-Feature/sprvrs 2009 build custom airflow docker image #67
+* Feature/sprvrs 2009 build custom airflow docker image #67
 https://github.source.internal.cba/AnalyticsInformation/adc.integration-framework/pull/67
 
-Added mwaa cloudformation template. #481
+* Added mwaa cloudformation template. #481
 https://github.source.internal.cba/PublicCloudLandingZoneExceptions/cba-a-ani-cdao_hosting-custom/pull/481
 
-Feature/sprvrs 2009 build custom airflow docker image #67
+* Feature/sprvrs 2009 build custom airflow docker image #67
 https://github.source.internal.cba/AnalyticsInformation/adc.integration-framework/pull/67
 
 #### PR I have reviewed
-https://github.source.internal.cba/AnalyticsInformation/adc.airflow.config/pull/410
-https://github.com/CBA-General/adc.airflow.dag/pull/24
-https://github.com/CBA-General/adc.airflow.dag/pull/37
-https://github.source.internal.cba/AnalyticsInformation/adc.airflow.dag/pull/1404
+* https://github.source.internal.cba/AnalyticsInformation/adc.airflow.config/pull/410
+* https://github.com/CBA-General/adc.airflow.dag/pull/24
+* https://github.com/CBA-General/adc.airflow.dag/pull/37
+* https://github.source.internal.cba/AnalyticsInformation/adc.airflow.dag/pull/1404
 
 #### Other PRs from my last rotation
-https://github.source.internal.cba/DigitalChannels/myproperty/pull/665
-https://github.source.internal.cba/DigitalChannels/myproperty/pull/662
-https://github.source.internal.cba/DigitalChannels/myproperty/pull/660
-https://github.source.internal.cba/DigitalChannels/myproperty/pull/652
-https://github.source.internal.cba/DigitalChannels/myproperty/pull/643
-https://github.source.internal.cba/DigitalChannels/myproperty/pull/631
-https://github.source.internal.cba/DigitalChannels/Azure.EnvironmentDefinition/pull/20778
-https://github.source.internal.cba/DigitalChannels/myproperty/pull/621
-https://github.source.internal.cba/DigitalChannels/myproperty/pull/620
-https://github.source.internal.cba/DigitalChannels/Azure.EnvironmentDefinition/pull/20666
-https://github.source.internal.cba/DigitalChannels/myproperty/pull/618
-https://github.source.internal.cba/DigitalChannels/myproperty/pull/615
-https://github.source.internal.cba/DigitalChannels/ManageMyHomeLoan/pull/4
-https://github.source.internal.cba/DigitalChannels/ManageMyHomeLoan/pull/3
-https://github.source.internal.cba/DigitalChannels/myproperty/pull/599
-https://github.source.internal.cba/DigitalChannels/myproperty/pull/598
-https://github.source.internal.cba/DigitalChannels/myproperty/pull/592
-https://github.source.internal.cba/DigitalChannels/myproperty/pull/589
-https://github.source.internal.cba/DigitalChannels/myproperty/pull/581
-https://github.source.internal.cba/DigitalChannels/myproperty/pull/586
+* https://github.source.internal.cba/DigitalChannels/myproperty/pull/665
+* https://github.source.internal.cba/DigitalChannels/myproperty/pull/662
+* https://github.source.internal.cba/DigitalChannels/myproperty/pull/660
+* https://github.source.internal.cba/DigitalChannels/myproperty/pull/652
+* https://github.source.internal.cba/DigitalChannels/myproperty/pull/643
+* https://github.source.internal.cba/DigitalChannels/myproperty/pull/631
+* https://github.source.internal.cba/DigitalChannels/Azure.EnvironmentDefinition/pull/20778
+* https://github.source.internal.cba/DigitalChannels/myproperty/pull/621
+* https://github.source.internal.cba/DigitalChannels/myproperty/pull/620
+* https://github.source.internal.cba/DigitalChannels/Azure.EnvironmentDefinition/pull/20666
+* https://github.source.internal.cba/DigitalChannels/myproperty/pull/618
+* https://github.source.internal.cba/DigitalChannels/myproperty/pull/615
+* https://github.source.internal.cba/DigitalChannels/ManageMyHomeLoan/pull/4
+* https://github.source.internal.cba/DigitalChannels/ManageMyHomeLoan/pull/3
+* https://github.source.internal.cba/DigitalChannels/myproperty/pull/599
+* https://github.source.internal.cba/DigitalChannels/myproperty/pull/598
+* https://github.source.internal.cba/DigitalChannels/myproperty/pull/592
+* https://github.source.internal.cba/DigitalChannels/myproperty/pull/589
+* https://github.source.internal.cba/DigitalChannels/myproperty/pull/581
+* https://github.source.internal.cba/DigitalChannels/myproperty/pull/586
 
 ## What are your most valuable engineering qualities?
 
@@ -265,15 +262,22 @@ My team also appreciated my ability to pick up tickets straight away, tackle fea
 Provide links or other artefacts on your plans to upskill or raise the bar (ie development plan).
 
 ## What skills and behaviours can you enhance to support your career progression?
-I believe continuous learning can faciliate my career progression and I will try to learn my in my own time as well as at work by watching and reading engineering materials and videos and doing a lot of hands on exploration in new coding methods and technologies.
+I believe continuous learning is key to facilitating my career progression. I plan to dedicate time both at work and on my own to watch and read engineering materials and videos, as well as engage in hands-on exploration of new coding methods and technologies. My current team utilizes a variety of cutting-edge tech stacks, including Apache Kafka, Apache Airflow, Python, Docker, Java, .NET, Flask, Kubernetes, Amazon EKS, Amazon Secrets Management, other AWS technologies, and even React!
+
+I can illustrate my commitment to continuous learning. I can recognise the need to stay updated with the latest technologies to advance my career, to improve my skills and knowledge, I decided to pursue additional learning opportunities outside of my regular work hours. I completed numerous Codecademy certifications and worked on my own projects in my spare time. Additionally, I have GitHub contributions to my side hustles and projects outside of work. Result: These efforts have made me an avid learner, continuously improving my technical capabilities and staying current with industry trends.
+
+I firmly believe that honing my communication skills will enhance my career progression. My current team provides numerous opportunities for me to demo the things I have built, which are topics I am very confident about. This serves as excellent practice for improving my communication abilities.
+
+Photo evidence of workshop meetings I am running:
+
 
 ### Supporting artefacts and information
-https://www.codecademy.com/profiles/luyangliuable/certificates/ffd0f42cce1a44e9a0108b365047a0a6
-https://www.credly.com/badges/511669ed-91e4-453b-a517-88c67fd3fb9e/public_url
-https://www.codecademy.com/profiles/luyangliuable/certificates/5cab64c55f1de8039db366ef
-https://www.codecademy.com/profiles/luyangliuable/certificates/8c3029c4a6e5894e74da756e3a7c0ae3
-https://www.codecademy.com/profiles/luyangliuable/certificates/56fb1e71303e37b643bb1905f31c8a09
-https://www.codecademy.com/profiles/luyangliuable/certificates/042a4e5884e3eb6ea1f2a12be6abb851
-https://www.codecademy.com/profiles/luyangliuable/certificates/9da8e26980d5139405439ee7578b8b69
-https://www.codecademy.com/profiles/luyangliuable/certificates/c87ba0541f8be78bc2f4ba1128233f6f
-https://www.codecademy.com/profiles/luyangliuable/certificates/37c55263a9f1b1f7603f7551c293ecbd
+* https://www.codecademy.com/profiles/luyangliuable/certificates/ffd0f42cce1a44e9a0108b365047a0a6
+* https://www.credly.com/badges/511669ed-91e4-453b-a517-88c67fd3fb9e/public_url
+* https://www.codecademy.com/profiles/luyangliuable/certificates/5cab64c55f1de8039db366ef
+* https://www.codecademy.com/profiles/luyangliuable/certificates/8c3029c4a6e5894e74da756e3a7c0ae3
+* https://www.codecademy.com/profiles/luyangliuable/certificates/56fb1e71303e37b643bb1905f31c8a09
+* https://www.codecademy.com/profiles/luyangliuable/certificates/042a4e5884e3eb6ea1f2a12be6abb851
+* https://www.codecademy.com/profiles/luyangliuable/certificates/9da8e26980d5139405439ee7578b8b69
+* https://www.codecademy.com/profiles/luyangliuable/certificates/c87ba0541f8be78bc2f4ba1128233f6f
+* https://www.codecademy.com/profiles/luyangliuable/certificates/37c55263a9f1b1f7603f7551c293ecbd
