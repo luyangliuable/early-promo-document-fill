@@ -7,7 +7,7 @@ https://github.source.internal.cba/liul31 (227 contributions in the last year)
 https://github.com/Lucas-Liu_cba (287 contributions)
 
 ### Website
-https://LLcode.tech
+https://llcode.tech
 
 ## a) What product/s do you work on and what is your role in that product's development?
 I am currently doing work across two different squads.
@@ -15,7 +15,7 @@ I am currently doing work across two different squads.
 One of the product I am involved with is the publishing and orchestration framework. This framework is crucial for managing the execution, transformation, and loading of model outputs. My role involves developing and maintaining this framework to ensure it meets the functional requirements as outlined in our user stories. Specifically, I focus on automating model job executions, transforming model outputs, and ensuring data quality through various validation checks. My key contributions are:
 
 * Performed airflow strategic alert uplift image testing, by ensuring All existing flows are validated with new docker image.
-* Built and pushed a custom Airflow Docker image with the updated Amazon provider package to Artifactory, then test it in the non-production environment to ensure all existing DAGs remain functional and resolve the GlueSensorOperator error.
+* Built and pushed a custom Airflow Docker image with the updated Amazon provider package to Artifactory, then test it in the non-production environment to ensure all existing DAGs remain functional and resolve the `GlueSensorOperator` error.
 * Created and configure the FRAUMD Kafka publisher and streamer pipeline in the adc-fraumd-stg namespace, then perform a full end-to-end test, including Helm charts creation, secrets management, and a complete test run from Snowflake to Oracle CEE.
  
 As part of maintaining and building the publishing and orchestration framework, we also utilised a tool called apache airflow which is a workflow management application that can perform dynamic workflow creation and scheduling and monitoring tasks. My role is to ensure apache airflow doesn't go down in prod and non prod and also update the docker images and any configuration for its eks instance using kubernetes and helm. 
@@ -35,22 +35,39 @@ My contributions on the xena product i am working on includes:
 
 ## b) What are the most complex technical components of the product and how have you contributed to overcoming those complexities?
 
-The most complex technical component I worked on was the Kafka pipeline split for the FRAUMD (fraud detection) and CBIRBS (customer behavioural insights - retail banking services) pipelines. This involved creating and configuring the Kafka pipeline, including both the publisher and streamer, within the adc-fraumd-stg namespace. I conducted a full end-to-end test to ensure the pipeline's functionality, which included creating Helm charts for the cee-publisher-mar application, configuring relevant secrets in Secrets Manager, and executing a comprehensive test run. This test run involved publishing to the Snowflake S07 test table, Kafka Publisher, Kafka topic STG, Kafka streamer, and Oracle CEE MAR_RT, ensuring seamless data flow and integration.
+The most complex technical component I worked on was the Kafka pipeline split for the FRAUMD (fraud detection) and CBIRBS (customer behavioural insights - retail banking services) pipelines.
 
-Then, I had to run a full test run of publishing to the Snowflake S07 test table → Kafka Publisher → Kafka topic STG → Kafka streamer → Oracle CEE MAR_RT.
+I used Apache Kafka, which is a tool designed for building real-time data pipelines and streaming applications which is crucial for our team's product.
+
+My work involved creating and configuring these Kafka pipelines, including both the publisher and streamer, within the `adc-fraumd-stg` namespace. I conducted a full end-to-end test to ensure the pipeline's functionality, which included creating Helm charts for the cee-publisher-mar application, configuring relevant secrets in Secrets Manager, and executing a comprehensive test run. This test run involved publishing to the Snowflake S07 test table, Kafka Publisher, Kafka topic STG, Kafka streamer, and Oracle CEE MAR_RT, ensuring seamless data flow and integration.
+
+Then, I had to run a full test run of publishing to the `Snowflake S07 test table` → `Kafka Publisher` → `Kafka topic STG` → `Kafka streamer` → `Oracle CEE MAR_RT`.
+
+* FRAUMD Kafka topic - Test Results
+  * This document details test results for the bespoke Kafka pipeline for the FRAUMD domain use-case.
+  * https://commbank.atlassian.net/wiki/spaces/CCS/pages/916112283/FRAUMD+Kafka+topic+-+Test+Results
 
 ## c) What is your most valued contribution to the product?
 
 The most valued contribution to my product is the GitHub Enterprise Cloud (GHEC) migration. This task involves extensive connectivity configuration, such as configuring the `calico network` to allow egress to the app-proxy, which is necessary for Airflow to sync the DAGs from the repository. We also needed to properly manage AWS secrets, including the GHEC service account credentials, and set up GitHub app authentication for GitHub workflows using Vault secrets. Additionally, updating GitHub Actions was required. I believe my extensive understanding of Git and GitHub enabled me to accomplish this task effectively. For instance, we needed to sync the branches of the old GitHub repository to the newly created GitHub cloud repository. I achieved this by setting two remotes locally, rebasing, fixing a myriad of merge conflicts, and then pushing the branches from the old repository to the new repository.
 
+* PR Evidence for configuring network policies: 
+  * https://github.source.internal.cba/ApplicationInfrastructure/aws.eks.clusters/pull/4858
+  * https://github.source.internal.cba/ApplicationInfrastructure/aws.eks.clusters/pull/4846
+
 I also made significant contributions to the Apache Airflow tech stack, an open-source tool widely used at CBA. My ability to set up Airflow and contribute to its source code demonstrates my exemplary skills as a developer. This work not only indirectly benefited everyone at CBA who relies on this tool but also every engineer and organisation that are using it as well elsewhere!
 
-PR i created and merged for the official apache airflow open source tool:
-* https://github.com/apache/airflow/pull/42896
+My contributions to the official Apache Airflow open-source tool indirectly benefit CBA by enhancing the overall functionality and usability of Airflow, which is widely used within CBA for orchestrating complex workflows and data pipelines. These contributions are:
+
+* PR i created and merged for the official apache airflow open source tool:
+  * For apache airflow, I have updated the URL to reflect changes in the `dagDisplayNamePattern`. I also created an enum in searchParams.ts. I am using a debounce logic for it as well
+  * https://github.com/apache/airflow/pull/42896
 
 The issue i was assigned to on the official apache airflow open source repo are:
-* https://github.com/apache/airflow/issues/42714#issuecomment-2426680190
-* https://github.com/apache/airflow/issues/43703
+* The public get dags endpoints in FastAPI now supports `dag_display_name_pattern`. We should use that to search DAGs in the UI and activate the disabled search bar that is already there.
+  * https://github.com/apache/airflow/issues/42714#issuecomment-2426680190
+* Turn the "Admin" button in the Nav into a menu, like we do with Docs or User with a Connections option. Add a Connections page. Within the Connections page, load the list of connections and render them in a table using our DataTable component. This should include limit/offset pagination and allow order_by columns that the API supports.
+  * https://github.com/apache/airflow/issues/43703
 
 ### Supporting artefacts and information
 
@@ -84,14 +101,15 @@ Consider how you contribute to the Technology Strategy. Provide links to your co
 I have contributed to improving engineering at CBA by addressing an issue in the Homebrew setup guide on the engineering handbook. When users followed the guide to install Homebrew and encountered an error with the brew install `jq` command, I created a script that bypasses the need to have jq installed. This aides in the speedup of the onboarding process. This solution ensures a smoother setup process for users, even when Artifactory is not set up, thereby enhancing the overall efficiency and reliability of our engineering practices.
 PR evidence: https://github.com/CBA-General/docs.engineering-handbook/pull/94
 
+I made significant contributions to the Apache Airflow tech stack, an open-source tool widely used at CBA. My ability to set up Airflow and contribute to its source code demonstrates my exemplary skills as a developer. This work not only indirectly benefited everyone at CBA who relies on this tool but also every engineer and organisation that are using it as well elsewhere!
+PR evidence: https://github.com/apache/airflow/pull/42896
+
 I also improved automation and branch naming by integrating the GENAI GitHub service account in the Toolkit trigger by updating the lambda function code to use a different authentication method and updating the branch naming methodology. This allows for more efficient triggering of workflows and tasks, reducing manual intervention and increasing overall productivity.
 PR evidence: https://github.com/CBA-General/dep-GenEx.AI/pull/19
 
-I integrated a code formatting script using `Prettier` into the `package.json` and created an `.editorconfig` file for the Xena chatbot frontend. So when dev push code onto the repo it will be formatted in a consistent manner, This initiative significantly enhanced engineering by improving code quality and readability. The integration of Prettier enforces consistent code formatting, thereby reducing syntax errors and manual formatting efforts. The .editorconfig file standardizes development environments across the team, ensuring uniformity in coding practices. These technical enhancements make the codebase easier to read, review, and maintain, ultimately fostering a more efficient and cohesive development workflow.
+I integrated a code formatting script using `prettier` into the `package.json` and created an `.editorconfig` file for the Xena chatbot frontend. Prettier is an opinionated code formatter available as an npm package. It enforces a consistent style by parsing your code and re-printing it with its own rules, which include handling things like line lengths, indentation, and spacing. So when dev push code onto the repo it will be formatted in a consistent manner, This initiative significantly enhanced engineering by improving code quality and readability. The integration of Prettier enforces consistent code formatting, thereby reducing syntax errors and manual formatting efforts. The .editorconfig file standardizes development environments across the team, ensuring uniformity in coding practices. These technical enhancements make the codebase easier to read, review, and maintain, ultimately fostering a more efficient and cohesive development workflow.
 PR evidence: https://github.com/CBA-General/dep-GenEx.AI-ui/pull/25
 
-I also made significant contributions to the Apache Airflow tech stack, an open-source tool widely used at CBA. My ability to set up Airflow and contribute to its source code demonstrates my exemplary skills as a developer. This work not only indirectly benefited everyone at CBA who relies on this tool but also every engineer and organisation that are using it as well elsewhere!
-PR evidence: https://github.com/apache/airflow/pull/42896
 
 ## Supporting artefacts and information
 PR contribution to engineering handbook:
